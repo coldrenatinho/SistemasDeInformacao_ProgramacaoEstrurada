@@ -15,14 +15,12 @@ int main()
     printf("Realizar a divisao entre dois valores inteiros\n");
     printf("Digite o valor do dividendo\n");
     scanf("%d", &a);
-    do
+
+    while (b == 0)
     {
-        printf("Digite o valor do divisor\n");
+        printf("Digite o valor do quociente\n");
         scanf("%d", &b);
-        if (b == 0)
-        {
-            printf("O divisor nao pode ser 0!!!\n");
-        }
-    } while (b == 0);
-    printf("O quociente da divisao é igual há: %2.f", a / (float)b);
+    }
+
+    printf("O quociten da divisao é igual há %.2f", a / (float)b);
 }
