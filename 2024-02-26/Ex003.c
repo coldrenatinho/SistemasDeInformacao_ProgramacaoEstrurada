@@ -1,4 +1,6 @@
 /*3) Reescreva o programa para o exercício 1 utilizando a estrutura do-while na construção da repetição de validação.*/
+#include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {

@@ -1,5 +1,7 @@
 /*2) Altere a solução do exercício anterior para que seja impressa a mensagem Valor inválido! caso o segundo valor
 informado seja zero.*/
+#include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {

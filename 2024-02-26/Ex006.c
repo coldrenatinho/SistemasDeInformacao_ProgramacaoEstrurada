@@ -2,10 +2,12 @@
 solicitando ao usuário que informe um código (1 ou 2) indicando se ele deseja ou não executar o programa
 novamente. Se for informado o código 1 deve ser repetida a execução de todo o programa para permitir um novo
 cálculo, caso contrário ele deve ser encerrado.*/
+#include <stdio.h>
+#include <stdlib.h>
 
 int valirdaNota(float note0)
 {
-    if (note0 < 0 || note0 > 10)
+    if (note0 <= 0 || note0 >= 10)
     {
         printf("Valor de nota inválido!!!\n\n");
         return 1;

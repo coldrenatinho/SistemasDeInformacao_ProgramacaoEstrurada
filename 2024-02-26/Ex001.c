@@ -5,6 +5,8 @@ OBS: O programa deve validar a leitura do
 segundo valor (que não deve ser nulo).
 Enquanto for fornecido um valor nulo a leitura deve ser repetida. Utilize a
 estrutura while na construção da repetição de validação.*/
+#include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {

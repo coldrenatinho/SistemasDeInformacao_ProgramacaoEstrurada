@@ -2,6 +2,8 @@
 Faça com que o algoritmo só aceite notas válidas (uma nota válida deve pertencer ao intervalo [0,10]). Cada nota deve
 ser validada separadamente. Deve ser impressa a mensagem "Nota inválida" caso a nota informada não pertença
 ao intervalo [0,10].*/
+#include <stdlib.h>
+#include <stdio.h>
 
 int valirdaNota(float note0)
 {
