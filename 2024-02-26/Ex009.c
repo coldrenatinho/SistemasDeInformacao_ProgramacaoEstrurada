@@ -1,6 +1,5 @@
-/*8) Escreva um programa para ler 2 notas de um aluno, calcular e imprimir a média final. Logo após escrever a mensagem
-"Calcular a média de outro aluno [S]im [N]ão?" e solicitar um resposta. Se a resposta for "S", o programa deve
-ser executado novamente, caso contrário deve ser encerrado imprimindo a quantidade de alunos aprovados.*/
+/*9) Reescreva o programa do exercício 8, para que seja impressa no final, a quantidade de alunos aprovados,
+reprovados e que ficaram em exame.*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,12 +8,14 @@ ser executado novamente, caso contrário deve ser encerrado imprimindo a quantid
 
 int main()
 {
-    int cont = 0;
+    int cont, apv, rep, exm;
+    cont = apv = rep = exm = 0;
     int statusRepet = 1;
 
     while (statusRepet == 1)
     {
-        float notaAluno[2];
+        float notaAluno[2] = {};
+        float media = 0;
         char inputRepet[2] = {};
 
         for (int i = 0; i < 2; ++i)
@@ -23,8 +24,25 @@ int main()
             scanf("%f", &notaAluno[i]);
         }
 
-        printf("Média do aluno: %.2f\n", (notaAluno[0] + notaAluno[1]) / 2);
+        media = (notaAluno[0] + notaAluno[1]) / 2;
+        printf("Média do aluno: %.2f\n", media);
 
+        if (media >= 7)
+        {
+            ++apv;
+        }
+        if (media == 5)
+        {
+            ++exm;
+        }
+        else
+        {
+            ++rep;
+        };
+        if (media == 5)
+        {
+            ++exm;
+        }
         while (toupper(inputRepet[0]) != 'N' && toupper(inputRepet[0]) != 'S')
         {
             printf("Deseja inserir a média para um novo aluno?\n"
@@ -42,6 +60,9 @@ int main()
     }
 
     printf("Total de alunos: %d\n", cont);
+    printf("Total de alunos aprovados: %d\n", apv);
+    printf("Total de alunos de exame: %d\n", exm);
+    printf("Total de reprovados: %d\n", rep);
 
     return 0;
 }
