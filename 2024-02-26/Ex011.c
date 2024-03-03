@@ -15,6 +15,7 @@ Observação: Para implementar um contador em C (incrementar):*/
 #include <stdio.h>
 #include <stdlib.h>
 
+/*Difine uma forma mais amigavel para alterar o nome dos times futuramento*/
 #define Time0 "Misto"
 #define Time1 "Cuiaba"
 
@@ -26,8 +27,10 @@ int main()
     vencTime0 = vencTime1 = emp0 = 0;
     status = 1;
 
+    /*Solicita a insercao de dados enquanto o loop for válido utlilizdo =! 2, por caso digitado um valor mesmo que incorreto "3", etc. o loop  se manterar*/
     do
     {
+        /*Inicial a váriaveis*/
         contGoalTime0 = contGoalTime1 = 0;
         printf("Digite o numero de gols efetuados pelo %s:\t", Time0);
         scanf("%d", &contGoalTime0);
@@ -57,17 +60,22 @@ int main()
 
     } while (status != 2);
 
-    printf("\n\nTotal de jogos %d\n", contJogos);
+    printf("\n\nEstatísticas finais:\n");
+    printf("Total de jogos: %d\n", contJogos);
+    printf("Vitórias do %s: %d\n", Time0, vencTime0);
+    printf("Vitórias do %s: %d\n", Time1, vencTime1);
+    printf("Empates: %d\n", emp0);
+
     if (vencTime0 == vencTime1)
     {
-        puts("Não houve ganhador");
+        puts("Não houve vencedor.");
     }
     else if (vencTime0 > vencTime1)
     {
-        printf("Time vencedor %s\n", Time0);
+        printf("Time vencedor: %s\n", Time0);
     }
     else
     {
-        printf("Time vencedor %s\n", Time1);
+        printf("Time vencedor: %s\n", Time1);
     }
 }
